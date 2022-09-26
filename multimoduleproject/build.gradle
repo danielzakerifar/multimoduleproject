@@ -1,0 +1,23 @@
+subprojects{
+
+
+apply plugin: 'java'
+
+version = '1.0'
+group='com.daniel.gradle'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+}
+
+project(':data'){
+	dependencies{
+	implementation project(':web')
+	}
+}
